@@ -1,15 +1,24 @@
 #ifndef MESH_H
 #define MESH_H
 
+#include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
-class Mesh
+using namespace sf;
+
+class Mesh : public Drawable
 {
+	int _meshCount;
+	std::vector<RectangleShape> quads;
+	
 public:
-	int meshCount;
+	Mesh(Vector2u& windowSize ,int& meshCount);
+	void check(RenderWindow& window);
+private:
 
-	Mesh(int meshCount);
-	void hello();
+	bool checkMesh(RectangleShape& quad, Vector2i& mousePosition);
+	virtual void draw(RenderTarget& target, RenderStates states) const;
 };
 
 #endif 

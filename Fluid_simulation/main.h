@@ -3,6 +3,7 @@
 
 #include "mesh.h"
 
+using namespace sf;
 
 // Constants
 const int WINDOW_WIDTH = 800;
