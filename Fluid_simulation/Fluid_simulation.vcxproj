@@ -147,12 +147,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cell.cpp" />
+    <ClCompile Include="ColorGradient.cpp" />
+    <ClCompile Include="fluid.cpp" />
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cell.h" />
+    <ClInclude Include="ColorGradient.h" />
+    <ClInclude Include="fluid.h" />
+    <ClInclude Include="log.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="mesh.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
