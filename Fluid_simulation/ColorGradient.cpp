@@ -2,7 +2,8 @@
 
 ColorGradient::ColorGradient(const Color& colorMin, const Color& colorMax)
 	: m_colorMin(colorMin), m_colorMax(colorMax),
-	m_minValue(0.0f), m_maxValue(0.0f)
+	m_minValue(0.0f), m_maxValue(0.0f),
+	m_minPlotValue(0.05f)
 {
 }
 
@@ -21,7 +22,8 @@ Color ColorGradient::evaluate(const float& value)
 
 void ColorGradient::setMax(const float& value)
 {
-	m_maxValue = value;
+	if(value > m_minPlotValue)
+		m_maxValue = value;
 }
 
 void ColorGradient::setMin(const float& value)

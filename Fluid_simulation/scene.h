@@ -12,8 +12,8 @@
 
 using namespace sf;
 
-const unsigned int MESH_X = 100;
-const unsigned int MESH_Y = 100;
+const unsigned int MESH_X = 50;
+const unsigned int MESH_Y = 50;
 const float LENGHT_X = 1.0f;
 const float LENGHT_Y = 1.0f;
 const float ORIGIN_X = 0.0f;

@@ -12,6 +12,8 @@ class ColorGradient
 
 	float m_minValue;
 	float m_maxValue;
+	float m_minPlotValue;
+
 public:
 	ColorGradient(const Color& colorMin, const Color& colorMax);
 	void setMin(const float& value);

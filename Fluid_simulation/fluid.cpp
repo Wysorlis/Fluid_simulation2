@@ -2,7 +2,7 @@
 
 Fluid::Fluid()
 {
-	density = 1.0f;
+	density = 3.0f;
 	diffusion = 1.0f;
 	viscosity = 1.0f;
 }

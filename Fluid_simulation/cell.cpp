@@ -1,8 +1,8 @@
 #include "cell.h"
 
 Cell::Cell(const Vector2f& size, const Vector2u& index)
-	:RectangleShape(size), fluid(), density(0.0f), velocity(0.0f, 0.0f),
-	previousVelocity(0.0f, 0.0f), m_index(index)
+	:RectangleShape(size), fluid(), density(0.0f), previousDensity(0.0f),
+	velocity(0.0f, 0.0f), previousVelocity(0.0f, 0.0f), m_index(index)
 {
 	setCellOptions();
 	
@@ -37,11 +37,12 @@ float Cell::getValue()
 
 void Cell::addDensity(const float& densityAmount)
 {
-	if (density >= 1.0f)
-		density = 1.0f;
+	if (density >= fluid.density)
+		density = fluid.density;
 	else
 		density += densityAmount;
 }
+
 
 void Cell::addVelocity(const Vector2f& velocityAmount)
 {

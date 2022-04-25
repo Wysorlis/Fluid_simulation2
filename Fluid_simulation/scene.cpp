@@ -43,7 +43,7 @@ int Scene::run()
         window.display();
 
         timeManager.update();
-        //timeManager.showFps(); 
+        timeManager.showFps(); 
     }
 
     return 0;

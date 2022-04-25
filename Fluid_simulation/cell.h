@@ -10,15 +10,14 @@ using namespace sf;
 class Cell : public RectangleShape
 {
 	Fluid fluid;
-
-	float density;
-	Vector2f velocity;
-	Vector2f previousVelocity;
-
+																														
 	Vector2f center;
 
 public:
 	Vector2u m_index;
+	float density, previousDensity;
+	Vector2f velocity;
+	Vector2f previousVelocity;
 
 	Cell(const Vector2f& size, const Vector2u& index);
 	Vector2f getCenter();
